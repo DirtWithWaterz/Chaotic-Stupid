@@ -1206,7 +1206,10 @@ GameObject:
   - component: {fileID: 4789928113435562275}
   - component: {fileID: 5188408856204504345}
   - component: {fileID: 8899689884261524068}
-  m_Layer: 0
+  - component: {fileID: 1855754727}
+  - component: {fileID: 1855754729}
+  - component: {fileID: 1855754728}
+  m_Layer: 6
   m_Name: Token
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1382,6 +1385,83 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &1855754727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789928113435562268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23003224c68fb2448e739c65706197a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ViewRadius: 8
+  AdditionalSoftenDistance: 0
+  ViewAngle: 360
+  UnobscuredRadius: 1
+  AddCorners: 1
+  RevealHiderInFadeOutZonePercentage: 0.5
+  EyeOffset: 0
+  VisionHeight: 3
+  VisionHeightSoftenDistance: 1.5
+  ObstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
+  RaycastResolution: 0.5
+  MaxEdgeResolveIterations: 10
+  NumExtraIterations: 4
+  NumExtraRaysOnIteration: 5
+  StartRevealerAsStatic: 0
+  StaticRevealer: 0
+  FogOfWarID: 0
+  IndexID: 0
+  NumberOfPoints: 0
+  Angles: []
+  Radii: []
+  AreHits: 
+  MaxAcceptableEdgeAngleDifference: 0.005
+  EdgeDstThreshold: 0.1
+  DoubleHitMaxDelta: 0.1
+  DoubleHitMaxAngleDelta: 15
+  DebugMode: 0
+  LogNumRaycasts: 0
+  NumRayCasts: 0
+  DrawRayNoise: 0
+  DrawExtraCastLines: 0
+  DrawIteritiveLines: 0
+  hidersSeen: []
+--- !u!114 &1855754729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789928113435562268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8e55f65c7a53348bbc8a3010293f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  samplePoints: []
+  maxDistBetweenPoints: 0
+  seenCount: 0
+  seenBy: []
+--- !u!114 &1855754728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789928113435562268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd2966c16df4fa4cba52ea99b2698d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectsToHide:
+  - {fileID: 4789928113435562270}
 --- !u!1 &4789928114089831028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,8 +1935,6 @@ MonoBehaviour:
   settingsScreen: {fileID: 4726552202459130024}
   controlSelector: {fileID: 4775151608566454767}
   currentControllingPlayer: 0
-  i: 0
-  holdRunning: 0
 --- !u!1 &5803572112664072442
 GameObject:
   m_ObjectHideFlags: 0
